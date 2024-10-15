@@ -1,8 +1,8 @@
-#navbar {
+.navbar {
     background-color: #ffc20e;
 }
 
 .active {
     font-weight: bold;
-    background-color: blue;
+    scale: 1.05
 }
