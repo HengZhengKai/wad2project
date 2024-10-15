@@ -4,5 +4,15 @@
 
 .active {
     font-weight: bold;
-    scale: 1.05
+}
+
+.active:hover {
+    font-weight: bold;
+    scale: 1.05;
+}
+
+#map {
+    height: 80vh;
+    width: 100%;
+    margin-top: 20px;
 }
