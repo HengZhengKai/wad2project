@@ -1,16 +1,15 @@
-const app = Vue.createApp({
+const home = Vue.createApp({
+
     data() {
         return {
-          // name:value pairs
         }
     },
-    mounted(){
-        console.log("Hello World")
 
+    mounted(){
     },
 
     methods: {
     }
 })
 
-app.mount('#app')
+home.mount('#home')
