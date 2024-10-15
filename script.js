@@ -32,7 +32,7 @@ const products = Vue.createApp({
 
 products.mount('#products')
 
-locations.html
+// locations.html
 const locations = Vue.createApp({
 
     data() {
