@@ -33,21 +33,21 @@ const products = Vue.createApp({
 products.mount('#products')
 
 // locations.html
-const locations = Vue.createApp({
+// const locations = Vue.createApp({
 
-    data() {
-        return {
-        }
-    },
+//     data() {
+//         return {
+//         }
+//     },
 
-    mounted(){
-    },
+//     mounted(){
+//     },
 
-    methods: {
-    }
-})
+//     methods: {
+//     }
+// })
 
-locations.mount('#locations')
+// locations.mount('#locations')
 
 // Create a new Vue component for the vending machine map
 Vue.component('vending-map', {
