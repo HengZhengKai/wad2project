@@ -20,80 +20,82 @@
 <body>
 
     <div id="app">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="#">🍟 SnackShack 🥤</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link fancy-btn" href="#">Sign Up</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fancy-btn" href="#">Login</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-  
-    <!-- Hero Section -->
-    <header class="hero text-center">
-        <div class="hero-overlay">
-            <div class="container text-center text-white">
-              <h1 class="glow">{{ headline }}</h1>
-              <p class="lead text-highlight">{{ tagline }}</p>
-              <button class="btn btn-lg btn-warning bouncy">{{ buttonText }}</button>
-            </div>
-        </div>
-    </header>
-  
-      <!-- Search Section -->
-      <section class="py-5 bg-light text-center">
-        <h2 class="fancy-title">{{ searchTitle }}</h2>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-6">
-              <input type="text" class="form-control mb-3 colorful-input" placeholder="Search for vending machines..." v-model="searchQuery">
-              <button class="btn btn-primary colorful-btn" @click="searchMachines">{{ searchButtonText }}</button>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-  
-      <!-- Vending Machine List Section -->
-      <section class="machine-list">
-        <div class="container">
-          <div class="row">
-            <div v-for="machine in filteredMachines" :key="machine.id" class="col-md-4 mb-4">
-              <div class="card machine-card colorful-card shadow-lg">
-                <img :src="machine.image" class="card-img-top" alt="Vending Machine image">
-                <div class="card-body">
-                  <h5 class="card-title colorful-title">{{ machine.name }}</h5>
-                  <p class="card-text">{{ machine.description }}</p>
-                  <button class="btn btn-outline-success rounded-pill fancy-btn">Find Now</button>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">🍟 SnackShack 🥤</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link fancy-btn" href="#">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fancy-btn" href="#">Login</a>
+                        </li>
+                    </ul>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </nav>
   
-      <!-- Location Section -->
-    <section class="location-section">
-        <div class="container">
-          <h2 class="fancy-title">Check out our vending machines in these locations</h2>
-          <div class="d-flex justify-content-center flex-wrap">
-            <div v-for="location in locations" :key="location.name" class="location-card colorful-btn shadow-lg" @click="showMachines(location)">
-              {{ location.name }}
+        <!-- Hero Section -->
+        <header class="hero text-center">
+            <div class="hero-overlay">
+                <div class="container text-center text-white">
+                    <h1 class="glow">{{ headline }}</h1>
+                    <p class="lead text-highlight">{{ tagline }}</p>
+                    <button class="btn btn-lg btn-warning bouncy">{{ buttonText }}</button>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </header>
+  
+        <!-- Search Section -->
+        <section class="py-5 bg-light text-center">
+            <h2 class="fancy-title">{{ searchTitle }}</h2>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control mb-3 colorful-input" placeholder="Search for vending machines..." v-model="searchQuery">
+                        <button class="btn btn-primary colorful-btn" @click="searchMachines">{{ searchButtonText }}</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+  
+  
+        <!-- Vending Machine List Section -->
+        <section class="machine-list">
+            <div class="container">
+                <div class="row">
+                    <div v-for="machine in filteredMachines" :key="machine.id" class="col-md-4 mb-4">
+                        <div class="card machine-card colorful-card shadow-lg">
+                            <img :src="machine.image" class="card-img-top" alt="Vending Machine image">
+                            <div class="card-body">
+                                <h5 class="card-title colorful-title">{{ machine.name }}</h5>
+                                <p class="card-text">{{ machine.description }}</p>
+                                <button class="btn btn-outline-success rounded-pill fancy-btn">Find Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+  
+        <!-- Location Section -->
+        <section class="location-section">
+            <div class="container">
+            <h2 class="fancy-title">Check out our vending machines in these locations</h2>
+            <div class="d-flex justify-content-center flex-wrap">
+                <div v-for="location in locations" :key="location.name" class="location-card colorful-btn shadow-lg" @click="showMachines(location)">
+                {{ location.name }}
+                </div>
+            </div>
+            </div>
+        </section>
+    
     </div>
 
     <!-- Bootstrap JavaScript -->
