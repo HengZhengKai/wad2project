@@ -1,31 +1,104 @@
-.hero {
-    background-image: url('images/image1.jpg');
+/* Navbar */
+.navbar-brand {
+    font-size: 2rem;
+    color: #ff6f61;
+    font-weight: bold;
+  }
+  
+  .fancy-btn {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .fancy-btn:hover {
+    background-color: #ff9470;
+    transform: scale(1.1);
+  }
+  
+  /* Hero Section (With Background Image) */
+  .hero {
+    height: 75vh;
+    background-image: url('images/image1.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
-    height: 75vh;
+    position: relative;
+  }
+  
+  .hero-overlay {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    align-items: center;
   }
   
-  .hero h1 {
+  .glow {
+    text-shadow: 0px 0px 10px #fff;
+    color: #ff6f61;
     font-size: 4rem;
+    animation: glow-effect 2s infinite alternate;
   }
   
-  .machine-list {
-    padding: 50px 0;
+  .text-highlight {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
   }
   
+  .bouncy {
+    animation: bounce 1.5s infinite;
+  }
+  
+  /* Search Section */
+  .fancy-title {
+    color: #ff6f61;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .colorful-input {
+    border: 2px solid #ff6f61;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .colorful-input:focus {
+    border-color: #ff9470;
+    box-shadow: 0 4px 8px rgba(255, 111, 97, 0.3);
+  }
+  
+  .colorful-btn {
+    background-color: #ff6f61;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border: none;
+  }
+  
+  .colorful-btn:hover {
+    background-color: #ff9470;
+    transform: scale(1.1);
+  }
+  
+  /* Machine List */
   .machine-card {
-    transition: transform 0.3s ease;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .machine-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
   
+  .colorful-title {
+    color: #ff6f61;
+    font-weight: bold;
+  }
+  
+  /* Location Section */
   .location-section {
     background-color: #f8f9fa;
     padding: 30px 0;
@@ -34,14 +107,35 @@
   
   .location-card {
     padding: 15px 30px;
-    border-radius: 8px;
-    background-color: #343a40;
+    border-radius: 50px;
+    background-color: #ff6f61;
     color: white;
     cursor: pointer;
     margin: 10px;
-    transition: background-color 0.3s;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
   }
   
   .location-card:hover {
-    background-color: #495057;
+    background-color: #ff9470;
+    transform: scale(1.1);
+  }
+  
+  /* Animations */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes glow-effect {
+    from {
+      text-shadow: 0px 0px 10px #fff;
+    }
+    to {
+      text-shadow: 0px 0px 20px #ff6f61;
+    }
   }
