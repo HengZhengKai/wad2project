@@ -1,18 +1,47 @@
-.navbar {
-    background-color: #ffc20e;
-}
-
-.active {
-    font-weight: bold;
-}
-
-.nav-link:hover {
-    font-weight: bold;
-    scale: 1.05;
-}
-
-#map {
-    width: 80%;
-    height: 500px;
-    margin-top: 20px;
-}
+.hero {
+    background-image: url('https://source.unsplash.com/1600x900/?vending-machine');
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+  }
+  
+  .machine-list {
+    padding: 50px 0;
+  }
+  
+  .machine-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .machine-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .location-section {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  .location-card {
+    padding: 15px 30px;
+    border-radius: 8px;
+    background-color: #343a40;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .location-card:hover {
+    background-color: #495057;
+  }
