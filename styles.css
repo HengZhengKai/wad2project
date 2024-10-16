@@ -1,13 +1,13 @@
 .hero {
-    background-image: url('https://source.unsplash.com/1600x900/?vending-machine');
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-background {
+    height: 100%;
     background-size: cover;
     background-position: center;
-    height: 75vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   }
   
   .hero h1 {
