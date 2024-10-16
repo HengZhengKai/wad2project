@@ -14,12 +14,6 @@ const app = Vue.createApp({
         { id: 4, name: 'Fresh Juice Machines', description: 'Cold-pressed juices on demand', image: 'https://source.unsplash.com/400x300/?vending-machine-juice' },
         { id: 5, name: 'Quick Snacks', description: 'Grab and go snacks', image: 'https://source.unsplash.com/400x300/?vending-machine-fast' },
         { id: 6, name: 'Coffee Machines', description: 'Brewed coffee 24/7', image: 'https://source.unsplash.com/400x300/?coffee-machine' }
-      ],
-
-      carouselImages: [
-        'carousel_images/image1.jpg',
-        'carousel_images/image2.jpg',
-        'carousel_images/image3.jpg',
       ]
     }
   },

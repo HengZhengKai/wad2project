@@ -40,22 +40,14 @@
         </div>
       </nav>
   
-    <!-- Hero Carousel Section -->
-    <header class="hero">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div v-for="(image, index) in carouselImages" :key="index" :class="['carousel-item', { active: index === 0 }]">
-              <div :style="{ backgroundImage: `url(${image})` }" class="carousel-background"></div>
-              <div class="carousel-caption d-none d-md-block">
-                <h1>{{ headline }}</h1>
-                <p class="lead">{{ tagline }}</p>
-                <button class="btn btn-lg btn-warning">{{ buttonText }}</button>
-              </div>
-            </div>
-          </div>
+    <!-- Hero Section -->
+    <header class="hero text-center">
+        <div>
+            <h1>{{ headline }}</h1>
+            <p class="lead">{{ tagline }}</p>
+            <button class="btn btn-lg btn-warning">{{ buttonText }}</button>
         </div>
-      </header>
-  
+    </header>
   
       <!-- Search Section -->
       <section class="py-5 bg-light text-center">
